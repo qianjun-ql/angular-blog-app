@@ -1,0 +1,14 @@
+
+<div class="card mb-5 mt-5 pb-5 shadow-effect" *ngIf="comData && comData.length > 0">
+    <div class="card-body" >
+      <h4 class="mt-3 mb-3">Comments</h4>
+      <div class="comment-box mt-3" *ngFor="let comment of comData">
+        <h6 class="mb-0">{{ comment.data.name }}</h6>
+        <small class="text-danger">{{ 'Last Updated - ' + (comment.data.createdAt?.toMillis() | date) }}</small>
+        <div class="mt-3 mb-3">
+          {{ comment.data.comment }}
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>

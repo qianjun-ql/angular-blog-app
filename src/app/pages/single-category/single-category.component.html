@@ -1,0 +1,13 @@
+<div class="bg-theme p-5">
+    <div class="container">
+        <h1 class="text-white">{{ catTitle.category }}</h1>
+        <p class="text-white">Please view {{catTitle.category}} posts here</p>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let catPost of catPostArray">
+            <app-post-card [postData] = 'catPost'></app-post-card>
+        </div>
+</div>
